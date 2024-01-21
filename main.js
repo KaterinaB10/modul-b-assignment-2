@@ -48,7 +48,8 @@ Example: "This is cool" should return "THIS IS COOL!"
 
 ******************************************************************************/
 
-export function makeMeLoud() {
+export function makeMeLoud(string) {
+  return string.toUpperCase(); //to fix
   //your code here
 }
 
@@ -73,7 +74,26 @@ The function should return:
 
 ******************************************************************************/
 
-export const greeter = () => {
+export const greeter = (name, hourOfTheDay) => {
+
+  if (hourOfTheDay < 0) {
+    return "Invalid time";
+  }
+  else if (hourOfTheDay >= 0 && hourOfTheDay <= 5) {
+    return "Good night " + name;
+  }
+  else if (hourOfTheDay >= 6 && hourOfTheDay <= 11) {
+    return "Good morning " + name;
+  }
+  else if (hourOfTheDay >= 12 && hourOfTheDay <= 17) {
+    return "Good day " + name;
+  }
+  else if (hourOfTheDay >= 18 && hourOfTheDay <= 23) {
+    return "Good evening " + name;
+  }
+  else if (hourOfTheDay > 23) {
+    return "Invalid time";
+  }
   //your code here
 };
 
