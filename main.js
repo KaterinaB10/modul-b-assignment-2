@@ -48,8 +48,8 @@ Example: "This is cool" should return "THIS IS COOL!"
 
 ******************************************************************************/
 
-export function makeMeLoud(string) {
-  return string.toUpperCase(); //to fix
+export function makeMeLoud(text) {
+  return text.toUpperCase() + "!"; //to fix
   //your code here
 }
 
