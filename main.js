@@ -111,8 +111,8 @@ Example 2: ["One", "Two", "Three", "Four", "Five", "Six"] should return
 ["Two", "Three", "Four", "Five"]
 ******************************************************************************/
 
-export function arrayTrimmer(arr) {
-  return arr.slice(1, -1);
+export function arrayTrimmer(array) {
+  return array.slice(1, -1);
   //your code here
 }
 
@@ -135,8 +135,14 @@ Example3: "   hard        " should return "fun"
 
 ******************************************************************************/
 
-export const cleanAndFun = () => {
-  //your code here
+export const cleanAndFun = (word) => {
+  if (word === "hard") {
+    return word.replace("hard","fun").trim();
+  }
+  else {
+    return word.trim();
+  }
+  //your code here //to fix
 };
 
 /******************************************************************************
