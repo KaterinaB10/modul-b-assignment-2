@@ -49,6 +49,7 @@ Example: "This is cool" should return "THIS IS COOL!"
 ******************************************************************************/
 
 export function makeMeLoud() {
+  return "This is cool".toUpperCase(); //to fix
   //your code here
 }
 
