@@ -138,7 +138,7 @@ Example3: "   hard        " should return "fun"
 export const cleanAndFun = (string) => {
 
     return string.replace("hard","fun").trim();
-  //your code here //to fix
+  //your code here //
 };
 
 /******************************************************************************
@@ -162,7 +162,12 @@ Use array methods to do the following:
 ******************************************************************************/
 
 export function marvelEditor(array) {
-  return array.slice(1,0).replace("Doctor Strange","Skrull").splice(1, 2, "Captain America").join('💪');
+  const newArray = array.slice(1);
+  let newNewArray = newArray.replace("Doctor Strange","Skrull");
+  let splicedArray = newNewArray.splice(0, 2, "Captain America");
+  return splicedArray.join('💪');
+
+  //return array.slice(1).replace("Doctor Strange","Skrull").splice(1, 2, "Captain America").join('💪');
   //your code here
 }
 
