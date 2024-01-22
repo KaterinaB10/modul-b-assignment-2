@@ -49,7 +49,7 @@ Example: "This is cool" should return "THIS IS COOL!"
 ******************************************************************************/
 
 export function makeMeLoud(text) {
-  return text.toUpperCase() + "!"; //to fix
+  return text.toUpperCase() + "!"; 
   //your code here
 }
 
@@ -135,13 +135,9 @@ Example3: "   hard        " should return "fun"
 
 ******************************************************************************/
 
-export const cleanAndFun = (word) => {
-  if (word === "hard") {
-    return word.replace("hard","fun").trim();
-  }
-  else {
-    return word.trim();
-  }
+export const cleanAndFun = (string) => {
+
+    return string.replace("hard","fun").trim();
   //your code here //to fix
 };
 
@@ -165,7 +161,8 @@ Use array methods to do the following:
  Return the resulting array.
 ******************************************************************************/
 
-export function marvelEditor() {
+export function marvelEditor(array) {
+  return array.slice(1,0).replace("Doctor Strange","Skrull").splice(1, 2, "Captain America").join('💪');
   //your code here
 }
 
