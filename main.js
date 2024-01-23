@@ -162,7 +162,7 @@ Use array methods to do the following:
 ******************************************************************************/
 
 export function marvelEditor(array) {
-  const newArray = array.slice(1);
+  let newArray = array.slice(1);
   let newNewArray = newArray.replace("Doctor Strange","Skrull");
   let splicedArray = newNewArray.splice(0, 2, "Captain America");
   return splicedArray.join('💪');
