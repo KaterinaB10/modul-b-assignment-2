@@ -16,8 +16,8 @@ Read the terminal output before and after to see the difference
 
 export function start() {
   //your code here
-  return true
-};
+  return true;
+}
 
 /******************************************************************************
 1.
@@ -49,7 +49,7 @@ Example: "This is cool" should return "THIS IS COOL!"
 ******************************************************************************/
 
 export function makeMeLoud(text) {
-  return text.toUpperCase() + "!"; 
+  return text.toUpperCase() + "!";
   //your code here
 }
 
@@ -75,23 +75,17 @@ The function should return:
 ******************************************************************************/
 
 export const greeter = (name, hourOfTheDay) => {
-
   if (hourOfTheDay < 0) {
     return "Invalid time";
-  }
-  else if (hourOfTheDay >= 0 && hourOfTheDay <= 5) {
+  } else if (hourOfTheDay >= 0 && hourOfTheDay <= 5) {
     return "Good night " + name;
-  }
-  else if (hourOfTheDay >= 6 && hourOfTheDay <= 11) {
+  } else if (hourOfTheDay >= 6 && hourOfTheDay <= 11) {
     return "Good morning " + name;
-  }
-  else if (hourOfTheDay >= 12 && hourOfTheDay <= 17) {
+  } else if (hourOfTheDay >= 12 && hourOfTheDay <= 17) {
     return "Good day " + name;
-  }
-  else if (hourOfTheDay >= 18 && hourOfTheDay <= 23) {
+  } else if (hourOfTheDay >= 18 && hourOfTheDay <= 23) {
     return "Good evening " + name;
-  }
-  else if (hourOfTheDay > 23) {
+  } else if (hourOfTheDay > 23) {
     return "Invalid time";
   }
   //your code here
@@ -136,8 +130,7 @@ Example3: "   hard        " should return "fun"
 ******************************************************************************/
 
 export const cleanAndFun = (string) => {
-
-    return string.replace("hard","fun").trim();
+  return string.replace("hard", "fun").trim();
   //your code here //
 };
 
@@ -163,12 +156,10 @@ Use array methods to do the following:
 
 export function marvelEditor(array) {
   let newArray = array.slice(1);
-  let newNewArray = newArray.replace("Doctor Strange","Skrull");
-  let splicedArray = newNewArray.splice(0, 2, "Captain America");
-  return splicedArray.join('💪');
-
-  //return array.slice(1).replace("Doctor Strange","Skrull").splice(1, 2, "Captain America").join('💪');
-  //your code here
+  newArray[newArray.indexOf("Doctor Strange")] = "Skrull"; //[newArray.indexOf("Doctor Strange")] = [2]
+  newArray.splice(0, 2, "Captain America");
+  newArray = newArray.join("💪");
+  return newArray;
 }
 
 /******************************************************************************
@@ -198,8 +189,19 @@ Return "😎Primitive values only😎"
 
 ******************************************************************************/
 
-export function coolMaker() {
-  //your code here
+export function coolMaker(param) {
+  if (param === "string") {
+    return "😎" + "string" + "😎";
+  } else if (param === "number") {
+    paramNum = (param * 2).toString();
+    return "😎" + paramNum + "😎";
+  } else if (param === true) {
+    return "😎Yeah😎";
+  } else if (param === false) {
+    return "😎Chill😎";
+  } else {
+    return "😎hello😎";
+  }
 }
 
 /******************************************************************************
